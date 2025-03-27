@@ -35,19 +35,33 @@ Update tsconfig.json to include:
 3. Folder Structure
 
 Playwright-TestHub/
+
 │-- tests/                 # Test cases
+
 │   ├── login.test.ts      # Example login test
+
 │   ├── homepage.test.ts   # Example homepage test
+
 │-- pages/                 # Page Object Model (POM)
+
 │   ├── login.page.ts      # Login page object
+
 │-- utils/                 # Utility functions
+
 │   ├── helpers.ts         # Custom helper functions
+
 │-- reports/               # Test reports
+
 │-- test-results/          # Playwright test results
+
 │-- playwright.config.ts   # Playwright test configuration
+
 │-- tsconfig.json          # TypeScript configuration
+
 │-- .gitignore             # Ignore unnecessary files
+
 │-- package.json           # Project metadata and dependencies
+
 │-- README.md              # Project documentation
 
 
