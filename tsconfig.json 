@@ -1,0 +1,12 @@
+# TypeScript configuration
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "tests",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
