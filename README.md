@@ -2,18 +2,24 @@
 A scalable and efficient test automation framework using Playwright and TypeScript. Designed for end-to-end (E2E) testing of web applications with robust reporting and parallel execution.
 
 Project Setup
+
 Step 1: Clone the Repository
 git clone https://github.com/yourusername/Playwright-TestHub.git
 cd Playwright-TestHub
+
 Step 2: Initialize a Node.js Project
 npm init -y
+
 Step 3: Install Playwright and Dependencies
 npm install -D playwright @playwright/test typescript ts-node dotenv
+
 Step 4: Install Browsers
 npx playwright install
+
 Step 5: Configure TypeScript
 Run the following command to generate a tsconfig.json file:
 npx tsc --init
+
 Update tsconfig.json to include:
 {
   "compilerOptions": {
@@ -25,6 +31,7 @@ Update tsconfig.json to include:
     "esModuleInterop": true
   }
 }
+
 3. Folder Structure
 
 Playwright-TestHub/
