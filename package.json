@@ -8,9 +8,21 @@
         "test:headed": "npx playwright test --headed",
         "test:report": "npx playwright show-report",
         "test:specific": "npx playwright test tests/login.test.ts",
+        "test:debug": "npx playwright test --debug",
+        "test:slowmo": "npx playwright test --headed --slow-mo 1000",
+        "test:ci": "npx playwright test --reporter=dot",
+        "install:playwright": "npx playwright install --with-deps",
+        "update:playwright": "npx playwright install chromium firefox webkit",
+        "clean": "rm -rf test-results && rm -rf reports && rm -rf allure-results",
         "lint": "eslint . --ext .ts",
+        "lint:fix": "eslint . --ext .ts --fix",
         "format": "prettier --write .",
-        "clean": "rm -rf test-results && rm -rf reports"
+        "format:check": "prettier --check .",
+        "tsc:check": "tsc --noEmit",
+        "prepare": "npm run lint && npm run format:check && npm run tsc:check",
+        "generate-report": "npx playwright test --reporter=html",
+        "update:dependencies": "npm update",
+        "start": "echo 'Run `npm test` to execute Playwright tests'"
     },
     "keywords": [
         "playwright",

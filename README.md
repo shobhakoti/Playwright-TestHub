@@ -93,3 +93,16 @@ jobs:
 
       - name: Run Tests
         run: npx playwright test
+
+
+@playwright/test → Playwright framework for running tests.
+
+typescript → Enables TypeScript support.
+
+ts-node → Allows running TypeScript files without compiling them manually.
+
+dotenv → Manages environment variables securely.
+
+eslint → Enforces coding standards and best practices.
+
+prettier → Ensures consistent code formatting.
