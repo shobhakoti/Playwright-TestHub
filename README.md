@@ -4,7 +4,7 @@ A scalable and efficient test automation framework using Playwright and TypeScri
 Project Setup
 
 Step 1: Clone the Repository
-git clone https://github.com/yourusername/Playwright-TestHub.git
+git clone https://github.com/techgurud/Playwright-TestHub
 cd Playwright-TestHub
 
 Step 2: Initialize a Node.js Project
@@ -32,46 +32,23 @@ Update tsconfig.json to include:
   }
 }
 
-3. Folder Structure
-
-Playwright-TestHub/
-
-│-- tests/                 # Test cases
-│   ├── login.test.ts      # Example login test
-│   ├── homepage.test.ts   # Example homepage test
-│-- pages/                 # Page Object Model (POM)
-│   ├── login.page.ts      # Login page object
-│-- utils/                 # Utility functions
-│   ├── helpers.ts         # Custom helper functions
-│-- reports/               # Test reports
-│-- test-results/          # Playwright test results
-│-- playwright.config.ts   # Playwright test configuration
-│-- tsconfig.json          # TypeScript configuration
-│-- .gitignore             # Ignore unnecessary files
-│-- package.json           # Project metadata and dependencies
-│-- README.md              # Project documentation
-
-
 
 4. Running Tests
 Run all tests:
-
 npx playwright test
+
 Run tests in headed mode (with UI):
-
 npx playwright test --headed
+
 Run a specific test file:
-
 npx playwright test tests/login.test.ts
-Generate HTML Test Report:
 
+Generate HTML Test Report:
 npx playwright show-report
+
 5. Environment Variables (Optional)
 Create a .env file in the root directory to store sensitive data:
 
-BASE_URL=https://yourwebsite.com
-USERNAME=your_username
-PASSWORD=your_password
 
 6. CI/CD Integration
 For GitHub Actions, create .github/workflows/playwright.yml:
@@ -106,3 +83,76 @@ dotenv → Manages environment variables securely.
 eslint → Enforces coding standards and best practices.
 
 prettier → Ensures consistent code formatting.
+
+Folder Structure
+
+Playwright-TestHub/
+
+project_root/
+├── config/                         # Configuration management
+│   ├── config.yaml                 # App/environment settings in YAML format
+│   ├── environment_manager.ts      # Manages environment switching (dev, QA, prod)
+│   └── config_reader.ts            # Reads and provides access to config values
+│
+├── drivers/
+│   └── browser_manager.ts
+│
+├── utils/ # Utility and helper classes
+│   ├── logger.ts                   # Logging utilities
+│   ├── wait_utils.ts               # Explicit/smart waits
+│   ├── element_utils.ts            # Click, input, visibility checks
+│   ├── assertion_utils.ts          # Assertion helpers
+│   ├── date_time_utils.ts          # Date and time functions
+│   ├── random_data_generator.ts    # Generate test data
+│   ├── file_utils.ts               # Read/write file utilities
+│   ├── screenshot_utils.ts         # Capture screenshots
+│   ├── exception_handler.ts        # Exception capture and handling
+│   ├── retry_utility.ts            # Retry logic for flaky tests
+│   ├── validation_utils.ts         # Input validation helpers
+│   └── service_locator.ts
+│
+├── data/ # Test data files
+│   ├── test_data.json              # JSON test data
+│   ├── excel_data.xlsx
+│   ├── data_reader.ts
+│   └── json_yaml_parser.ts
+│
+├── api_utils/                      # API testing support
+│   ├── api_client.ts               # HTTP client for API calls
+│   ├── api_validator.ts            # Response validation helpers
+│   └── mock_server_helper.ts       # Mocking/stubbing support
+│
+├── db_utils/ # Database connectors
+│   ├── sql_connector.ts            # SQL DB connector
+│   └── nosql_connector.ts          # NoSQL connector (Mongo, etc.)
+│
+├── reports/ # Reporting
+│   ├── html_reporter.ts            # HTML report logic
+│   ├── result_parser.ts            # Parse results
+│   ├── email_reporter.ts           # Email report summary
+│   └── allure_report_config.xml    # Allure configuration
+│
+├── ci_cd/ # CI/CD scripts
+│   ├── test_runner.ts              # Script to run tests
+│   ├── ci_trigger.ts               # Trigger CI jobs
+│   └── notifier.ts                 # Send CI/CD notifications
+│
+├── tests/
+│   ├── test_login.ts
+│   └── test_checkout.ts
+│
+├── pages/ # POM for app pages
+│   ├── login_page.ts
+│   ├── dashboard_page.ts
+│   └── base_page.ts
+│
+├── resources/ # Static resources
+│   └── locators.yaml # Element locators
+│
+├── requirements.txt
+└── README.md.                           # Project documentation
+├── playwright.config.ts                 # Playwright configuration
+├── tsconfig.json                        # TypeScript configuration
+├── package.json                         # Project metadata and dependencies
+├── package-lock.json                    # Lock file for npm
+└── .gitignore                           # Git ignored files
