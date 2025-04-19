@@ -54,5 +54,8 @@
     "bugs": {
         "url": "https://github.com/techgurud/Playwright-TestHub/issues"
     },
-    "homepage": "https://github.com/techgurud/Playwright-TestHub#readme"
+    "homepage": "https://github.com/techgurud/Playwright-TestHub#readme",
+    "dependencies": {
+        "xlsx": "^0.18.5"
+    }
 }

@@ -1,4 +1,6 @@
-# TypeScript configuration
+# TypeScript compiler configuration.
+# Enables type checking, IntelliSense, and cleaner code.
+# Required to compile TypeScript into JavaScript before execution.
 
 {
   "compilerOptions": {
